@@ -9,7 +9,7 @@ export default class App extends Component {
       calculationText: '',
     };
 
-    this.operations = ['DEL', '+', '-', '*', '/'];
+    this.operations = ['^1/2', '+', '-', '*', '/'];
   }
 
   calculateResult() {
@@ -61,6 +61,8 @@ export default class App extends Component {
         this.setState({
           resultText: this.state.resultText + operation,
         });
+      case '1/2 : 
+          this.setState({resultText: Math.sqrt(this.state.resultText)})
     }
   }
 
